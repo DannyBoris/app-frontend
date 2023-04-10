@@ -1,6 +1,6 @@
 import axios, { AxiosError } from "axios";
 
-const net = axios.create({ baseURL: "http://localhost:8080" });
+const net = axios.create({ baseURL: "http://3.93.63.217:8080" });
 
 export async function api(
   path: string,
@@ -12,6 +12,6 @@ export async function api(
     const res = await net[method](path, data, options);
     return res.data;
   } catch (err: any) {
-    return err
+    return err;
   }
 }
